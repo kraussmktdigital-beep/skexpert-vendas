@@ -271,6 +271,8 @@ h1 span{
     justify-content:center;
 
     transition:.25s;
+
+    cursor:pointer;
 }
 
 .btn-primary{
@@ -1108,7 +1110,6 @@ footer{
 
 /* =====================================================
    SK EXPERT AI
-   BOTÃO DISCRETO + JANELA
 ===================================================== */
 
 .ai-button{
@@ -1616,9 +1617,13 @@ INTELIGÊNCIA TRIBUTÁRIA COMERCIAL
 <a href="#faq">FAQ</a>
 
 <a
-href="#planos"
-class="nav-button">
+href="https://pay.hotmart.com/G107873865C"
+class="nav-button"
+target="_blank"
+rel="noopener noreferrer">
+
 Começar agora
+
 </a>
 
 </nav>
@@ -1673,8 +1678,15 @@ oportunidades comerciais.
 
 <div class="hero-buttons">
 
-<a href="https://pay.hotmart.com/G107873865C">
-  Começar por R$ 49,90/mês
+
+<a
+href="https://pay.hotmart.com/G107873865C"
+class="btn btn-primary"
+target="_blank"
+rel="noopener noreferrer">
+
+Começar por R$ 49,90/mês
+
 </a>
 
 
@@ -2468,8 +2480,14 @@ Atualizações e evolução da plataforma
 </div>
 
 
-<a href="https://pay.hotmart.com/G107873865C">
-  Começar por R$ 49,90/mês
+<a
+href="https://pay.hotmart.com/G107873865C"
+class="btn btn-primary"
+target="_blank"
+rel="noopener noreferrer">
+
+Começar por R$ 49,90/mês
+
 </a>
 
 
@@ -2519,8 +2537,15 @@ possibilidades de venda.
 
 </p>
 
-<a href="https://pay.hotmart.com/G107873865C">
-  Começar por R$ 49,90/mês
+
+<a
+href="https://pay.hotmart.com/G107873865C"
+class="btn btn-primary"
+target="_blank"
+rel="noopener noreferrer">
+
+Começar por R$ 49,90/mês
+
 </a>
     
 </div>
@@ -2730,7 +2755,6 @@ Todos os direitos reservados.
 
 <!-- =====================================================
      BOTÃO DA IA
-     A LOGO FICA SEMPRE VISÍVEL
 ===================================================== -->
 
 <button
@@ -2768,8 +2792,6 @@ id="aiWindow">
 
 <div class="ai-header">
 
-
-<!-- LOGO SEMPRE VISÍVEL -->
 
 <img
 src="logo.png"
@@ -3027,9 +3049,11 @@ function askAI(type){
 
                 addMessage(
 
-                    '<a href="#planos" ' +
+                    '<a href="https://pay.hotmart.com/G107873865C" ' +
+                    'target="_blank" ' +
+                    'rel="noopener noreferrer" ' +
                     'style="color:#4bb6ff;font-weight:800;">' +
-                    'Ver plano de R$ 49,90 →' +
+                    'Começar por R$ 49,90 →' +
                     '</a>',
 
                     "bot"
@@ -3083,13 +3107,6 @@ document
     );
 
 });
-
-
-/* =====================================================
-   IMPORTANTE:
-   A IA NÃO ABRE SOZINHA.
-   A LOGO PERMANECE VISÍVEL.
-===================================================== */
 
 
 /* =====================================================
