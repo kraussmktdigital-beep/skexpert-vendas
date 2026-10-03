@@ -1,0 +1,3140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SK EXPERT — Inteligência Tributária Comercial</title>
+
+<meta name="description"
+content="SK EXPERT — Inteligência Tributária Comercial com IA, CRM e prospecção nacional. Transforme inteligência em novas oportunidades comerciais.">
+
+<style>
+
+:root{
+    --bg:#02050b;
+    --bg2:#061127;
+    --blue:#0878ff;
+    --blue2:#19a1ff;
+    --cyan:#42c8ff;
+    --text:#f5f9ff;
+    --muted:#8fa4c1;
+    --line:rgba(80,150,255,.18);
+    --card:rgba(6,18,40,.72);
+    --success:#35e6a1;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Inter,Arial,Helvetica,sans-serif;
+    background:
+        radial-gradient(circle at 80% 10%,rgba(0,119,255,.18),transparent 32%),
+        radial-gradient(circle at 10% 40%,rgba(0,75,180,.12),transparent 30%),
+        linear-gradient(145deg,#01030a,#031026 55%,#02050b);
+    color:var(--text);
+    overflow-x:hidden;
+}
+
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    background-image:
+        linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+    background-size:70px 70px;
+    mask-image:linear-gradient(to bottom,black,transparent 85%);
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    background:rgba(1,5,14,.78);
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(80,150,255,.12);
+}
+
+.nav{
+    height:78px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:55px;
+    height:55px;
+    object-fit:contain;
+}
+
+.logo-text{
+    line-height:1.05;
+}
+
+.logo-text strong{
+    font-size:20px;
+    letter-spacing:2px;
+}
+
+.logo-text span{
+    display:block;
+    margin-top:5px;
+
+    color:#75a5d8;
+
+    font-size:9px;
+    letter-spacing:1.8px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    align-items:center;
+}
+
+.nav-links a{
+    font-size:13px;
+    color:#b9c9df;
+
+    transition:.2s;
+}
+
+.nav-links a:hover{
+    color:white;
+}
+
+.nav-button{
+    padding:12px 20px;
+
+    border-radius:9px;
+
+    background:linear-gradient(
+        135deg,
+        var(--blue),
+        var(--blue2)
+    );
+
+    font-weight:800;
+    font-size:13px;
+
+    box-shadow:0 0 25px rgba(0,120,255,.25);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:900px;
+
+    padding-top:150px;
+
+    display:flex;
+    align-items:center;
+
+    position:relative;
+}
+
+.hero-grid{
+    display:grid;
+
+    grid-template-columns:1.08fr .92fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.badge{
+    display:inline-flex;
+
+    padding:8px 14px;
+
+    border:1px solid rgba(40,150,255,.35);
+
+    border-radius:100px;
+
+    background:rgba(0,100,255,.08);
+
+    color:#72bdff;
+
+    font-size:11px;
+
+    letter-spacing:1.8px;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(43px,6vw,76px);
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+
+    max-width:760px;
+}
+
+h1 span{
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #54b7ff,
+            #1988ff
+        );
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+}
+
+.hero-description{
+    margin-top:28px;
+
+    max-width:690px;
+
+    color:#9eb1cc;
+
+    font-size:19px;
+
+    line-height:1.7;
+}
+
+.hero-buttons{
+    margin-top:36px;
+
+    display:flex;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:16px 25px;
+
+    border-radius:10px;
+
+    font-weight:800;
+
+    font-size:14px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.25s;
+}
+
+.btn-primary{
+    background:
+        linear-gradient(
+            135deg,
+            #0878ff,
+            #1ca8ff
+        );
+
+    box-shadow:
+        0 10px 40px rgba(0,110,255,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 15px 45px rgba(0,130,255,.38);
+}
+
+.btn-outline{
+    border:1px solid rgba(110,170,255,.28);
+
+    background:rgba(255,255,255,.025);
+
+    color:#c9d8eb;
+}
+
+.btn-outline:hover{
+    border-color:#168fff;
+}
+
+.hero-note{
+    margin-top:22px;
+
+    font-size:12px;
+
+    color:#667b98;
+}
+
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard{
+    position:relative;
+
+    border:1px solid rgba(65,150,255,.25);
+
+    border-radius:20px;
+
+    padding:18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7,23,49,.95),
+            rgba(2,8,19,.94)
+        );
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.45),
+        0 0 70px rgba(0,90,255,.13);
+
+    transform:
+        perspective(1000px)
+        rotateY(-4deg);
+}
+
+.dashboard:after{
+    content:"";
+
+    position:absolute;
+
+    inset:-1px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30,160,255,.35),
+            transparent 40%,
+            rgba(20,90,255,.15)
+        );
+
+    z-index:-1;
+}
+
+.dash-top{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+}
+
+.dash-title{
+    font-weight:800;
+
+    font-size:15px;
+}
+
+.live{
+    font-size:9px;
+
+    color:var(--success);
+
+    padding:5px 8px;
+
+    border:1px solid rgba(53,230,161,.25);
+
+    border-radius:50px;
+}
+
+.kpis{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:10px;
+}
+
+.kpi{
+    padding:15px;
+
+    border-radius:11px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.kpi small{
+    color:#7087a5;
+
+    display:block;
+
+    font-size:9px;
+}
+
+.kpi strong{
+    display:block;
+
+    margin-top:8px;
+
+    font-size:21px;
+}
+
+.chart{
+    height:180px;
+
+    margin-top:12px;
+
+    border-radius:11px;
+
+    background:
+        linear-gradient(
+            rgba(50,120,200,.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(50,120,200,.07) 1px,
+            transparent 1px
+        ),
+        rgba(255,255,255,.018);
+
+    background-size:32px 32px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.chart-line{
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:20px;
+
+    height:100px;
+}
+
+.chart-line svg{
+    width:100%;
+    height:100%;
+}
+
+.opportunities{
+    margin-top:12px;
+
+    display:grid;
+
+    gap:8px;
+}
+
+.opportunity{
+    padding:11px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.025);
+
+    border-radius:9px;
+
+    border:1px solid rgba(255,255,255,.05);
+}
+
+.opportunity span{
+    color:#a4b7d1;
+
+    font-size:10px;
+}
+
+.temperature{
+    color:#40dfff;
+
+    font-size:10px;
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   TRUST
+========================= */
+
+.trust{
+    padding:28px 0;
+
+    border-top:1px solid var(--line);
+
+    border-bottom:1px solid var(--line);
+}
+
+.trust-inner{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.trust p{
+    color:#627795;
+
+    font-size:11px;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+.trust-items{
+    display:flex;
+
+    gap:30px;
+
+    color:#8ea6c4;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+    padding:110px 0;
+}
+
+.section-label{
+    color:#2698ff;
+
+    font-size:11px;
+
+    letter-spacing:2.5px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-size:clamp(34px,4vw,54px);
+
+    letter-spacing:-2px;
+
+    max-width:760px;
+
+    line-height:1.05;
+}
+
+.section-text{
+    margin-top:20px;
+
+    color:#8da1bd;
+
+    max-width:720px;
+
+    line-height:1.7;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features{
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:16px;
+
+    margin-top:55px;
+}
+
+.feature{
+    padding:30px;
+
+    border:1px solid var(--line);
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(8,25,54,.65),
+            rgba(3,10,24,.65)
+        );
+
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+
+    border-color:
+        rgba(40,150,255,.42);
+}
+
+.feature-number{
+    color:#238fff;
+
+    font-weight:900;
+
+    font-size:12px;
+}
+
+.feature h3{
+    margin-top:30px;
+
+    font-size:21px;
+}
+
+.feature p{
+    margin-top:13px;
+
+    color:#8197b5;
+
+    line-height:1.6;
+
+    font-size:14px;
+}
+
+
+/* =========================
+   INTELLIGENCE
+========================= */
+
+.intelligence{
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.intelligence-list{
+    margin-top:30px;
+
+    display:grid;
+
+    gap:13px;
+}
+
+.intelligence-item{
+    display:flex;
+
+    gap:14px;
+
+    padding:17px;
+
+    border:1px solid rgba(70,140,230,.14);
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.018);
+}
+
+.check{
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(50,170,255,.4);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#38b7ff;
+
+    font-size:11px;
+
+    flex-shrink:0;
+}
+
+.intelligence-item strong{
+    font-size:14px;
+}
+
+.intelligence-item p{
+    color:#758ca9;
+
+    font-size:12px;
+
+    margin-top:4px;
+}
+
+
+/* =========================
+   CRM
+========================= */
+
+.crm-box{
+    padding:45px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(50,140,255,.2);
+
+    background:
+        radial-gradient(
+            circle at 90% 0%,
+            rgba(0,130,255,.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            145deg,
+            #061631,
+            #020713
+        );
+}
+
+.crm-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:12px;
+
+    margin-top:35px;
+}
+
+.crm-card{
+    padding:22px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.06);
+}
+
+.crm-card strong{
+    display:block;
+
+    margin-bottom:8px;
+
+    font-size:14px;
+}
+
+.crm-card span{
+    color:#7187a4;
+
+    font-size:11px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   PRICING
+========================= */
+
+.pricing-section{
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(0,100,255,.13),
+            transparent 35%
+        );
+}
+
+.pricing-head{
+    text-align:center;
+}
+
+.pricing-head .section-title{
+    margin:auto;
+}
+
+.pricing-head .section-text{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.pricing{
+    max-width:440px;
+
+    margin:50px auto 0;
+}
+
+.price-card{
+    position:relative;
+
+    padding:38px;
+
+    border-radius:22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7,29,63,.98),
+            rgba(2,8,19,.98)
+        );
+
+    border:1px solid rgba(38,150,255,.5);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.4),
+        0 0 50px rgba(0,110,255,.12);
+}
+
+.price-badge{
+    position:absolute;
+
+    top:-13px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:7px 15px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0878ff,
+            #19a1ff
+        );
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+
+    white-space:nowrap;
+}
+
+.price-card h3{
+    font-size:23px;
+}
+
+.price-sub{
+    color:#7990ae;
+
+    font-size:13px;
+
+    margin-top:8px;
+}
+
+.price{
+    margin-top:25px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    gap:5px;
+}
+
+.price small{
+    color:#7890ae;
+
+    font-size:14px;
+
+    margin-bottom:8px;
+}
+
+.price strong{
+    font-size:52px;
+
+    letter-spacing:-3px;
+}
+
+.price span{
+    color:#7990ae;
+
+    margin-bottom:9px;
+
+    font-size:12px;
+}
+
+.price-features{
+    margin-top:30px;
+
+    display:grid;
+
+    gap:13px;
+}
+
+.price-feature{
+    color:#b3c2d8;
+
+    font-size:13px;
+
+    display:flex;
+
+    gap:10px;
+}
+
+.price-feature:before{
+    content:"✓";
+
+    color:#35e6a1;
+
+    font-weight:bold;
+}
+
+.price-card .btn{
+    width:100%;
+
+    margin-top:30px;
+}
+
+.price-note{
+    text-align:center;
+
+    margin-top:13px;
+
+    color:#617693;
+
+    font-size:10px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    padding:100px 0;
+}
+
+.cta-box{
+    text-align:center;
+
+    padding:75px 35px;
+
+    border-radius:24px;
+
+    border:1px solid rgba(40,145,255,.23);
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(0,130,255,.2),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #061936,
+            #020713
+        );
+}
+
+.cta-box h2{
+    font-size:clamp(35px,5vw,60px);
+
+    letter-spacing:-2px;
+}
+
+.cta-box p{
+    color:#899db9;
+
+    margin:20px auto 30px;
+
+    max-width:620px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    max-width:850px;
+
+    margin:45px auto 0;
+}
+
+.faq-item{
+    border-bottom:
+        1px solid
+        rgba(100,150,210,.13);
+}
+
+.faq-question{
+    width:100%;
+
+    background:none;
+
+    border:0;
+
+    color:white;
+
+    padding:23px 0;
+
+    text-align:left;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.faq-answer{
+    max-height:0;
+
+    overflow:hidden;
+
+    transition:.3s;
+
+    color:#7e94b0;
+
+    line-height:1.7;
+
+    font-size:13px;
+}
+
+.faq-item.active .faq-answer{
+    max-height:180px;
+
+    padding-bottom:22px;
+}
+
+.plus{
+    color:#248fff;
+
+    font-size:20px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:45px 0;
+
+    border-top:1px solid var(--line);
+}
+
+.footer-inner{
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    align-items:center;
+}
+
+.footer-copy{
+    color:#607693;
+
+    font-size:11px;
+}
+
+.footer-brand{
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+
+/* =====================================================
+   SK EXPERT AI
+   BOTÃO DISCRETO + JANELA
+===================================================== */
+
+.ai-button{
+    position:fixed;
+
+    right:22px;
+
+    bottom:22px;
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    padding:5px;
+
+    border:1px solid rgba(45,155,255,.65);
+
+    background:
+        linear-gradient(
+            145deg,
+            #020b1c,
+            #082451
+        );
+
+    box-shadow:
+        0 8px 28px rgba(0,0,0,.45),
+        0 0 22px rgba(0,110,255,.28);
+
+    z-index:2000;
+
+    cursor:pointer;
+
+    transition:.25s ease;
+
+    animation:aiPulse 3.5s infinite;
+}
+
+.ai-button:hover{
+    transform:scale(1.08);
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.5),
+        0 0 35px rgba(0,130,255,.5);
+}
+
+.ai-button img{
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+
+    display:block;
+}
+
+@keyframes aiPulse{
+
+    0%,100%{
+        box-shadow:
+            0 8px 28px rgba(0,0,0,.45),
+            0 0 18px rgba(0,110,255,.25);
+    }
+
+    50%{
+        box-shadow:
+            0 8px 28px rgba(0,0,0,.45),
+            0 0 30px rgba(0,130,255,.45);
+    }
+}
+
+
+/* BALÃO */
+
+.ai-hint{
+    position:fixed;
+
+    right:25px;
+
+    bottom:91px;
+
+    z-index:1998;
+
+    padding:9px 13px;
+
+    background:rgba(3,13,31,.96);
+
+    border:1px solid rgba(45,145,255,.32);
+
+    border-radius:9px;
+
+    color:#bcd4f2;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,.35);
+
+    opacity:0;
+
+    transform:translateY(7px);
+
+    animation:hintIn .8s ease forwards;
+
+    animation-delay:2s;
+}
+
+.ai-hint:after{
+    content:"";
+
+    position:absolute;
+
+    right:17px;
+
+    bottom:-5px;
+
+    width:9px;
+
+    height:9px;
+
+    background:#06142c;
+
+    border-right:
+        1px solid
+        rgba(45,145,255,.32);
+
+    border-bottom:
+        1px solid
+        rgba(45,145,255,.32);
+
+    transform:rotate(45deg);
+}
+
+@keyframes hintIn{
+
+    to{
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+
+/* =====================================================
+   JANELA DA IA
+===================================================== */
+
+.ai-window{
+    position:fixed;
+
+    right:22px;
+
+    bottom:92px;
+
+    width:350px;
+
+    max-width:calc(100vw - 30px);
+
+    height:470px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5,20,45,.98),
+            rgba(1,7,17,.98)
+        );
+
+    border:
+        1px solid
+        rgba(50,150,255,.3);
+
+    border-radius:18px;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.55),
+        0 0 35px rgba(0,100,255,.1);
+
+    z-index:1999;
+
+    display:none;
+
+    flex-direction:column;
+
+    overflow:hidden;
+}
+
+.ai-window.open{
+    display:flex;
+
+    animation:
+        aiOpen .22s ease;
+}
+
+@keyframes aiOpen{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(10px)
+            scale(.97);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* CABEÇALHO DA IA */
+
+.ai-header{
+    padding:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    border-bottom:
+        1px solid
+        rgba(80,140,220,.14);
+
+    background:
+        rgba(0,10,25,.45);
+}
+
+.ai-header img{
+    width:45px;
+
+    height:45px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+}
+
+.ai-header strong{
+    display:block;
+
+    font-size:13px;
+}
+
+.ai-header span{
+    display:block;
+
+    color:#6f88a7;
+
+    font-size:9px;
+
+    margin-top:3px;
+}
+
+
+/* MENSAGENS */
+
+.ai-messages{
+    flex:1;
+
+    overflow-y:auto;
+
+    padding:17px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+}
+
+.message{
+    max-width:88%;
+
+    padding:11px 13px;
+
+    border-radius:12px;
+
+    font-size:12px;
+
+    line-height:1.55;
+}
+
+.message strong{
+    color:#55baff;
+}
+
+.bot{
+    align-self:flex-start;
+
+    background:
+        rgba(255,255,255,.045);
+
+    color:#c1d0e3;
+}
+
+.user{
+    align-self:flex-end;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0878ff,
+            #176fd5
+        );
+
+    color:white;
+}
+
+
+/* AÇÕES */
+
+.ai-actions{
+    padding:12px;
+
+    display:grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:7px;
+
+    border-top:
+        1px solid
+        rgba(80,140,220,.12);
+}
+
+.ai-actions button{
+    border:
+        1px solid
+        rgba(70,140,230,.22);
+
+    background:
+        rgba(255,255,255,.025);
+
+    color:#a9bdd6;
+
+    border-radius:8px;
+
+    padding:9px;
+
+    cursor:pointer;
+
+    font-size:10px;
+
+    transition:.2s;
+}
+
+.ai-actions button:hover{
+    border-color:#168fff;
+
+    color:white;
+
+    background:
+        rgba(0,120,255,.08);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+
+        padding-top:130px;
+
+        padding-bottom:70px;
+    }
+
+    .hero-grid,
+    .intelligence{
+        grid-template-columns:1fr;
+    }
+
+    .dashboard{
+        transform:none;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .crm-grid{
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+@media(max-width:600px){
+
+    h1{
+        font-size:43px;
+    }
+
+    .hero-description{
+        font-size:16px;
+    }
+
+    .kpis{
+        grid-template-columns:1fr;
+    }
+
+    .crm-box{
+        padding:25px;
+    }
+
+    .crm-grid{
+        grid-template-columns:1fr;
+    }
+
+    .price-card{
+        padding:30px 23px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .ai-button{
+        width:54px;
+
+        height:54px;
+
+        right:15px;
+
+        bottom:15px;
+    }
+
+    .ai-hint{
+        right:17px;
+
+        bottom:82px;
+    }
+
+    .ai-window{
+        right:15px;
+
+        bottom:82px;
+
+        width:
+            calc(100vw - 30px);
+
+        height:450px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container nav">
+
+<a href="#" class="logo">
+
+<img src="logo.png" alt="SK EXPERT">
+
+<div class="logo-text">
+
+<strong>SK EXPERT</strong>
+
+<span>
+INTELIGÊNCIA TRIBUTÁRIA COMERCIAL
+</span>
+
+</div>
+
+</a>
+
+
+<nav class="nav-links">
+
+<a href="#solucao">Solução</a>
+
+<a href="#inteligencia">IA</a>
+
+<a href="#crm">CRM</a>
+
+<a href="#planos">Plano</a>
+
+<a href="#faq">FAQ</a>
+
+<a
+href="#planos"
+class="nav-button">
+Começar agora
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+<div class="container hero-grid">
+
+
+<div>
+
+<div class="badge">
+
+IA • CRM • PROSPECÇÃO • INTELIGÊNCIA EM TEMPO REAL
+
+</div>
+
+
+<h1>
+
+Transforme inteligência tributária em
+
+<span>
+novas vendas.
+</span>
+
+</h1>
+
+
+<p class="hero-description">
+
+Inteligência que evolui em tempo real,
+acompanha as mudanças tributárias e
+transforma informação em novas
+oportunidades comerciais.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a
+href="#planos"
+class="btn btn-primary">
+
+Começar por R$ 49,90/mês
+
+</a>
+
+
+<a
+href="#solucao"
+class="btn btn-outline">
+
+Conhecer a plataforma
+
+</a>
+
+</div>
+
+
+<p class="hero-note">
+
+Plataforma comercial para empresas,
+vendedores, consultores e equipes B2B.
+
+</p>
+
+</div>
+
+
+
+<!-- DASHBOARD -->
+
+<div class="dashboard">
+
+
+<div class="dash-top">
+
+<div class="dash-title">
+
+SK EXPERT Intelligence
+
+</div>
+
+<div class="live">
+
+INTELIGÊNCIA ATIVA
+
+</div>
+
+</div>
+
+
+<div class="kpis">
+
+
+<div class="kpi">
+
+<small>
+EMPRESAS NO UNIVERSO
+</small>
+
+<strong>
+42.860
+</strong>
+
+</div>
+
+
+<div class="kpi">
+
+<small>
+OPORTUNIDADES
+</small>
+
+<strong>
+8.421
+</strong>
+
+</div>
+
+
+<div class="kpi">
+
+<small>
+ÍNDICE COMERCIAL
+</small>
+
+<strong>
+87%
+</strong>
+
+</div>
+
+</div>
+
+
+<div class="chart">
+
+<div class="chart-line">
+
+<svg
+viewBox="0 0 500 130"
+preserveAspectRatio="none">
+
+<polyline
+points="
+0,115
+55,98
+105,105
+160,72
+215,82
+270,50
+325,62
+380,25
+440,42
+500,8
+"
+fill="none"
+stroke="#1595ff"
+stroke-width="4"/>
+
+</svg>
+
+</div>
+
+</div>
+
+
+<div class="opportunities">
+
+
+<div class="opportunity">
+
+<span>
+Oportunidade tributária • MG
+</span>
+
+<strong class="temperature">
+ALTA
+</strong>
+
+</div>
+
+
+<div class="opportunity">
+
+<span>
+Empresa B2B • SP
+</span>
+
+<strong class="temperature">
+QUENTE
+</strong>
+
+</div>
+
+
+<div class="opportunity">
+
+<span>
+Potencial comercial • GO
+</span>
+
+<strong class="temperature">
+ALTA
+</strong>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRUST
+===================================================== -->
+
+<div class="trust">
+
+<div class="container trust-inner">
+
+<p>
+Construído para operação comercial B2B
+</p>
+
+<div class="trust-items">
+
+<span>IA</span>
+
+<span>CRM</span>
+
+<span>PROSPECÇÃO</span>
+
+<span>DADOS</span>
+
+<span>TRIBUTÁRIO</span>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     SOLUÇÃO
+===================================================== -->
+
+<section id="solucao">
+
+<div class="container">
+
+
+<div class="section-label">
+A SOLUÇÃO
+</div>
+
+
+<h2 class="section-title">
+
+O mercado muda.
+Sua inteligência também.
+
+</h2>
+
+
+<p class="section-text">
+
+O SK EXPERT conecta inteligência tributária,
+análise comercial, prospecção e CRM em
+uma única operação.
+
+Você identifica oportunidades,
+entende o contexto e transforma
+dados em ação comercial.
+
+</p>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="feature-number">
+01
+</div>
+
+<h3>
+Inteligência Tributária
+</h3>
+
+<p>
+Acompanhe mudanças, temas e
+oportunidades relacionadas ao cenário
+tributário e transforme informação
+em inteligência comercial.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-number">
+02
+</div>
+
+<h3>
+Prospecção Nacional
+</h3>
+
+<p>
+Explore empresas e oportunidades
+em diferentes regiões, segmentos,
+regimes e mercados.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-number">
+03
+</div>
+
+<h3>
+CRM Integrado
+</h3>
+
+<p>
+A inteligência não termina na descoberta.
+Leads, contatos, atividades e oportunidades
+entram no fluxo comercial.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-number">
+04
+</div>
+
+<h3>
+IA Comercial
+</h3>
+
+<p>
+Utilize IA para interpretar informações,
+orientar a prospecção e acelerar
+a tomada de decisão comercial.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-number">
+05
+</div>
+
+<h3>
+Prioridade Comercial
+</h3>
+
+<p>
+Organize empresas e oportunidades
+por indicadores internos de
+inteligência comercial.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-number">
+06
+</div>
+
+<h3>
+Visão Nacional
+</h3>
+
+<p>
+Uma operação preparada para equipes
+que precisam enxergar oportunidades
+além do próprio território.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     IA
+===================================================== -->
+
+<section id="inteligencia">
+
+<div class="container intelligence">
+
+
+<div>
+
+
+<div class="section-label">
+IA EM TEMPO REAL
+</div>
+
+
+<h2 class="section-title">
+
+Informação sozinha não vende.
+Inteligência direciona.
+
+</h2>
+
+
+<p class="section-text">
+
+O SK EXPERT foi pensado para transformar
+informação em contexto comercial e
+contexto em ação.
+
+</p>
+
+
+<div class="intelligence-list">
+
+
+<div class="intelligence-item">
+
+<div class="check">
+✓
+</div>
+
+<div>
+
+<strong>
+Acompanhe mudanças tributárias
+</strong>
+
+<p>
+Tenha uma camada de inteligência
+para acompanhar o cenário.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="intelligence-item">
+
+<div class="check">
+✓
+</div>
+
+<div>
+
+<strong>
+Encontre oportunidades
+</strong>
+
+<p>
+Identifique empresas e contextos
+que merecem atenção comercial.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="intelligence-item">
+
+<div class="check">
+✓
+</div>
+
+<div>
+
+<strong>
+Conecte inteligência ao CRM
+</strong>
+
+<p>
+Leve a oportunidade descoberta
+diretamente para a operação comercial.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="dashboard">
+
+
+<div class="dash-top">
+
+<div class="dash-title">
+Mapa de Inteligência
+</div>
+
+<div class="live">
+TEMPO REAL
+</div>
+
+</div>
+
+
+<div
+class="chart"
+style="height:300px;">
+
+
+<div style="
+position:absolute;
+inset:25px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+grid-template-rows:repeat(4,1fr);
+gap:10px;
+">
+
+
+<div style="background:rgba(0,125,255,.12);border-radius:8px;"></div>
+
+<div style="background:rgba(0,150,255,.28);border-radius:8px;"></div>
+
+<div style="background:rgba(0,105,255,.42);border-radius:8px;"></div>
+
+<div style="background:rgba(0,170,255,.18);border-radius:8px;"></div>
+
+<div style="background:rgba(0,120,255,.32);border-radius:8px;"></div>
+
+
+<div style="background:rgba(0,180,255,.30);border-radius:8px;"></div>
+
+<div style="background:rgba(0,90,255,.50);border-radius:8px;"></div>
+
+<div style="background:rgba(0,150,255,.55);border-radius:8px;"></div>
+
+<div style="background:rgba(0,110,255,.25);border-radius:8px;"></div>
+
+<div style="background:rgba(0,170,255,.38);border-radius:8px;"></div>
+
+
+<div style="background:rgba(0,130,255,.22);border-radius:8px;"></div>
+
+<div style="background:rgba(0,180,255,.42);border-radius:8px;"></div>
+
+<div style="background:rgba(0,100,255,.62);border-radius:8px;"></div>
+
+<div style="background:rgba(0,140,255,.35);border-radius:8px;"></div>
+
+<div style="background:rgba(0,180,255,.48);border-radius:8px;"></div>
+
+
+<div style="background:rgba(0,100,255,.30);border-radius:8px;"></div>
+
+<div style="background:rgba(0,150,255,.35);border-radius:8px;"></div>
+
+<div style="background:rgba(0,180,255,.55);border-radius:8px;"></div>
+
+<div style="background:rgba(0,100,255,.25);border-radius:8px;"></div>
+
+<div style="background:rgba(0,150,255,.42);border-radius:8px;"></div>
+
+
+</div>
+
+
+<div style="
+position:absolute;
+left:25px;
+bottom:18px;
+color:#6081a9;
+font-size:9px;
+letter-spacing:1px;
+">
+
+INTELIGÊNCIA COMERCIAL NACIONAL
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CRM
+===================================================== -->
+
+<section id="crm">
+
+<div class="container">
+
+
+<div class="crm-box">
+
+
+<div class="section-label">
+CRM + INTELIGÊNCIA
+</div>
+
+
+<h2 class="section-title">
+
+Não basta encontrar a oportunidade.
+É preciso trabalhar a oportunidade.
+
+</h2>
+
+
+<p class="section-text">
+
+Por isso o CRM faz parte da inteligência
+do SK EXPERT.
+
+A descoberta, o relacionamento e
+o acompanhamento comercial ficam
+conectados em uma única jornada.
+
+</p>
+
+
+<div class="crm-grid">
+
+
+<div class="crm-card">
+
+<strong>
+Leads
+</strong>
+
+<span>
+Organize empresas e contatos
+em sua operação.
+</span>
+
+</div>
+
+
+<div class="crm-card">
+
+<strong>
+Pipeline
+</strong>
+
+<span>
+Acompanhe oportunidades desde
+a prospecção até a venda.
+</span>
+
+</div>
+
+
+<div class="crm-card">
+
+<strong>
+Atividades
+</strong>
+
+<span>
+Registre contatos, tarefas,
+reuniões e próximos passos.
+</span>
+
+</div>
+
+
+<div class="crm-card">
+
+<strong>
+Inteligência
+</strong>
+
+<span>
+Conecte contexto tributário e
+comercial à oportunidade.
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PLANO
+===================================================== -->
+
+<section id="planos" class="pricing-section">
+
+<div class="container">
+
+
+<div class="pricing-head">
+
+
+<div class="section-label">
+PLANO MENSAL
+</div>
+
+
+<h2 class="section-title">
+
+Inteligência comercial por
+menos de R$ 2 por dia.
+
+</h2>
+
+
+<p class="section-text">
+
+Comece agora e tenha acesso à estrutura
+do SK EXPERT para transformar sua
+operação comercial.
+
+</p>
+
+</div>
+
+
+
+<div class="pricing">
+
+
+<div class="price-card">
+
+
+<div class="price-badge">
+ACESSO SK EXPERT
+</div>
+
+
+<h3>
+SK EXPERT
+</h3>
+
+
+<p class="price-sub">
+Inteligência Tributária Comercial
+</p>
+
+
+<div class="price">
+
+<small>
+R$
+</small>
+
+<strong>
+49,90
+</strong>
+
+<span>
+/mês
+</span>
+
+</div>
+
+
+<div class="price-features">
+
+
+<div class="price-feature">
+Inteligência tributária comercial
+</div>
+
+<div class="price-feature">
+Prospecção nacional
+</div>
+
+<div class="price-feature">
+Recursos de IA comercial
+</div>
+
+<div class="price-feature">
+CRM integrado
+</div>
+
+<div class="price-feature">
+Gestão de leads e oportunidades
+</div>
+
+<div class="price-feature">
+Organização do pipeline comercial
+</div>
+
+<div class="price-feature">
+Atualizações e evolução da plataforma
+</div>
+
+</div>
+
+
+<a
+href="https://wa.me/5535999999999?text=Olá!%20Quero%20assinar%20o%20SK%20EXPERT%20por%20R%24%2049%2C90%2Fmês."
+target="_blank"
+class="btn btn-primary">
+
+Quero o SK EXPERT
+
+</a>
+
+
+<p class="price-note">
+
+Cobrança mensal.
+Cancele quando quiser.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+<div class="container">
+
+
+<div class="cta-box">
+
+
+<h2>
+
+Pare de procurar oportunidades
+no escuro.
+
+</h2>
+
+
+<p>
+
+Coloque inteligência, dados, IA e CRM
+dentro da sua operação comercial e
+transforme informação em novas
+possibilidades de venda.
+
+</p>
+
+
+<a
+href="#planos"
+class="btn btn-primary">
+
+Começar agora por R$ 49,90/mês
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section id="faq">
+
+<div class="container">
+
+
+<div class="pricing-head">
+
+
+<div class="section-label">
+PERGUNTAS FREQUENTES
+</div>
+
+
+<h2 class="section-title">
+Antes de começar
+</h2>
+
+</div>
+
+
+
+<div class="faq">
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+O que é o SK EXPERT?
+
+<span class="plus">+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+O SK EXPERT é uma plataforma de
+inteligência tributária comercial que
+combina IA, prospecção, análise de
+oportunidades e CRM para apoiar
+operações comerciais B2B.
+
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+O CRM faz parte da plataforma?
+
+<span class="plus">+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+Sim. A proposta é conectar a inteligência
+à execução comercial, permitindo
+organizar leads, contatos, atividades
+e oportunidades dentro do mesmo ambiente.
+
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+A plataforma trabalha com dados oficiais?
+
+<span class="plus">+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+A plataforma pode utilizar fontes oficiais
+e outras fontes autorizadas conforme a
+configuração do sistema. Informações
+oficiais devem ser diferenciadas dos
+indicadores comerciais calculados pelo
+SK EXPERT.
+
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+O índice do SK EXPERT é oficial?
+
+<span class="plus">+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+Não. Indicadores e scores comerciais
+apresentados pelo SK EXPERT são índices
+internos de inteligência comercial e não
+representam score oficial do governo,
+crédito oficial ou estimativa oficial de
+recuperação tributária.
+
+</div>
+
+</div>
+
+
+
+<div class="faq-item">
+
+<button class="faq-question">
+
+Posso cancelar?
+
+<span class="plus">+</span>
+
+</button>
+
+
+<div class="faq-answer">
+
+O plano apresentado possui cobrança
+mensal e pode ser cancelado conforme
+as condições comerciais da assinatura.
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container footer-inner">
+
+
+<div>
+
+<div class="footer-brand">
+SK EXPERT
+</div>
+
+<div class="footer-copy">
+Inteligência Tributária Comercial
+</div>
+
+</div>
+
+
+<div class="footer-copy">
+
+© 2026 SK EXPERT.
+Todos os direitos reservados.
+
+</div>
+
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     BOTÃO DA IA
+     A LOGO FICA SEMPRE VISÍVEL
+===================================================== -->
+
+<button
+class="ai-button"
+id="aiButton"
+aria-label="Abrir SK EXPERT AI">
+
+<img
+src="logo.png"
+alt="SK EXPERT AI">
+
+</button>
+
+
+<!-- CONVITE DISCRETO -->
+
+<div
+class="ai-hint"
+id="aiHint">
+
+Fale com a IA do SK EXPERT
+
+</div>
+
+
+
+<!-- =====================================================
+     JANELA DA IA
+===================================================== -->
+
+<div
+class="ai-window"
+id="aiWindow">
+
+
+<div class="ai-header">
+
+
+<!-- LOGO SEMPRE VISÍVEL -->
+
+<img
+src="logo.png"
+alt="SK EXPERT">
+
+
+<div>
+
+<strong>
+SK EXPERT AI
+</strong>
+
+<span>
+INTELIGÊNCIA TRIBUTÁRIA COMERCIAL
+</span>
+
+</div>
+
+</div>
+
+
+
+<div
+class="ai-messages"
+id="aiMessages">
+
+
+<div class="message bot">
+
+Olá. Eu sou a inteligência comercial
+do <strong>SK EXPERT</strong>.
+
+Posso apresentar a plataforma,
+explicar a IA, mostrar como funciona
+o CRM ou apresentar o plano.
+
+</div>
+
+
+</div>
+
+
+
+<div class="ai-actions">
+
+
+<button onclick="askAI('solution')">
+
+Conhecer a solução
+
+</button>
+
+
+<button onclick="askAI('ia')">
+
+Como funciona a IA?
+
+</button>
+
+
+<button onclick="askAI('crm')">
+
+Conhecer o CRM
+
+</button>
+
+
+<button onclick="askAI('price')">
+
+Ver plano
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<script>
+
+
+/* =====================================================
+   IA
+===================================================== */
+
+const aiButton =
+document.getElementById("aiButton");
+
+const aiWindow =
+document.getElementById("aiWindow");
+
+const aiMessages =
+document.getElementById("aiMessages");
+
+const aiHint =
+document.getElementById("aiHint");
+
+
+/* ABRIR / FECHAR */
+
+aiButton.addEventListener(
+    "click",
+    () => {
+
+        aiWindow.classList.toggle("open");
+
+        if(
+            aiWindow.classList.contains("open")
+        ){
+
+            aiHint.style.display="none";
+
+        }
+
+    }
+);
+
+
+/* MENSAGEM */
+
+function addMessage(
+    text,
+    type
+){
+
+    const div =
+    document.createElement("div");
+
+    div.className =
+    "message " + type;
+
+    div.innerHTML =
+    text;
+
+    aiMessages.appendChild(div);
+
+    aiMessages.scrollTop =
+    aiMessages.scrollHeight;
+}
+
+
+/* RESPOSTAS */
+
+function askAI(type){
+
+
+    if(type === "solution"){
+
+        addMessage(
+            "Quero conhecer a solução.",
+            "user"
+        );
+
+
+        setTimeout(() => {
+
+            addMessage(
+
+                "O <strong>SK EXPERT</strong> conecta " +
+                "<strong>IA + Inteligência Tributária + Prospecção + CRM</strong> " +
+                "em uma única operação comercial. " +
+                "A proposta é transformar dados e mudanças do mercado " +
+                "em oportunidades que podem ser trabalhadas pela equipe de vendas.",
+
+                "bot"
+
+            );
+
+        },450);
+
+    }
+
+
+
+    if(type === "ia"){
+
+        addMessage(
+            "Como funciona a IA?",
+            "user"
+        );
+
+
+        setTimeout(() => {
+
+            addMessage(
+
+                "A IA foi pensada para apoiar a operação comercial: " +
+                "interpretar informações, contextualizar oportunidades, " +
+                "acompanhar temas relevantes e ajudar o usuário " +
+                "a decidir onde concentrar seus esforços comerciais.",
+
+                "bot"
+
+            );
+
+        },450);
+
+    }
+
+
+
+    if(type === "crm"){
+
+        addMessage(
+            "Quero conhecer o CRM.",
+            "user"
+        );
+
+
+        setTimeout(() => {
+
+            addMessage(
+
+                "O CRM fica conectado à inteligência. " +
+                "Você pode organizar <strong>leads, empresas, contatos, " +
+                "atividades, oportunidades e pipeline</strong>, " +
+                "evitando que uma oportunidade identificada fique perdida " +
+                "fora da operação comercial.",
+
+                "bot"
+
+            );
+
+        },450);
+
+    }
+
+
+
+    if(type === "price"){
+
+        addMessage(
+            "Quero ver o plano.",
+            "user"
+        );
+
+
+        setTimeout(() => {
+
+            addMessage(
+
+                "O plano apresentado atualmente é de " +
+                "<strong>R$ 49,90 por mês</strong>. " +
+                "Você pode começar pela estrutura do SK EXPERT " +
+                "e evoluir sua operação conforme a necessidade.",
+
+                "bot"
+
+            );
+
+
+            setTimeout(() => {
+
+                addMessage(
+
+                    '<a href="#planos" ' +
+                    'style="color:#4bb6ff;font-weight:800;">' +
+                    'Ver plano de R$ 49,90 →' +
+                    '</a>',
+
+                    "bot"
+
+                );
+
+            },300);
+
+
+        },450);
+
+    }
+
+}
+
+
+/* =====================================================
+   FAQ
+===================================================== */
+
+document
+.querySelectorAll(".faq-question")
+.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        () => {
+
+            const item =
+            button.parentElement;
+
+            item.classList.toggle(
+                "active"
+            );
+
+
+            const plus =
+            button.querySelector(
+                ".plus"
+            );
+
+
+            plus.textContent =
+            item.classList.contains(
+                "active"
+            )
+            ? "−"
+            : "+";
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   IMPORTANTE:
+   A IA NÃO ABRE SOZINHA.
+   A LOGO PERMANECE VISÍVEL.
+===================================================== */
+
+
+/* =====================================================
+   FECHAR IA AO CLICAR FORA
+===================================================== */
+
+document.addEventListener(
+    "click",
+    (event) => {
+
+        const clickedInsideAI =
+            aiWindow.contains(event.target);
+
+        const clickedButton =
+            aiButton.contains(event.target);
+
+        if(
+            !clickedInsideAI &&
+            !clickedButton &&
+            aiWindow.classList.contains("open")
+        ){
+
+            aiWindow.classList.remove("open");
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+</html>
